@@ -10,7 +10,7 @@ import Shortlisting from './Components/Shortlisting';
 import Login from './Components/Login';
 import Selection from './Components/Selection';
 import RegisterPage2 from './Components/Signup';
-import Testing from './Components/testing';
+import Testing from './Components/Testing';
 
 function App() {
   return (

@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import host from "../config.js";
+
 function CheckStatus() {
   const [companyName, setCompanyName] = React.useState();
   const [data, setData] = React.useState();
@@ -9,7 +11,7 @@ function CheckStatus() {
     console.log(companyName);
     axios
       .post(
-        "http://localhost:8000/api/v1/interaction/getCurrentStatusCompany",
+        host + "/interaction/getCurrentStatusCompany",
         { companyName }
       )
       .then((res) => {

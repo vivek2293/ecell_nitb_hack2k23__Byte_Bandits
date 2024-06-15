@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../config.js";
 
 // Made states for all the entries in the form
 
@@ -29,7 +30,7 @@ function AddCompany() {
     function saveData() {
         const data = { ...formdata };
         console.log(data);
-        axios.post("http://localhost:8000/api/v1/company/createCompanyRecord", data)
+        axios.post(host + "/company/createCompanyRecord", data)
             .then((res) => {
                 console.log("Sent");
                 toast.success("Company added")

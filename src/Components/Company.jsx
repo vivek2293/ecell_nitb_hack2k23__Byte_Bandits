@@ -1,7 +1,7 @@
 import React from "react";
-// import data from "../Data.jsx";
-import "./CSS/Company.css"
+import "./css/company.css"
 import axios from "axios";
+import host from "../config.js";
 
 export default function Company() {
 
@@ -77,7 +77,7 @@ export default function Company() {
         }
     }, [elements1]);
     React.useEffect(()=>{
-        axios.post("http://localhost:8000/api/v1/company/alldata", {})
+        axios.post(host + "/company/alldata", {})
         .then((res) => {
             setData(res.data);
         }).catch((err) => {

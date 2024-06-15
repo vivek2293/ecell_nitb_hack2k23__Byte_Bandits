@@ -1,9 +1,9 @@
 import React from "react";
-import "./CSS/dashboard.css";
+import "./css/dashboard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOut, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import Table from "./Table";
-import Form from "./form";
+import Form from "./Form.jsx";
 import Graph from "./PlacementStats.jsx";
 import Company from "./Company";
 import AddCompany from "./AddCompany";
@@ -12,7 +12,7 @@ import PastRecruiter from "./PastRecruiter";
 import logo from "./Assets/Logo2.png";
 import Update from "./Update";
 import CheckStatus from "./CheckStatus";
-import Testing from "./testing";
+import Testing from "./Testing.jsx";
 
 export default function Dashboard() {
 

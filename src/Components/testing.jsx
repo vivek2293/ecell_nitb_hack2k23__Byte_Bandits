@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+import host from "../config.js";
+
+
 export default function Testing() {
     const [msg, setMsg] = React.useState(false);
     const [data,setData] = React.useState();
@@ -23,7 +26,7 @@ export default function Testing() {
         console.log(year);
         console.log(inputMessage)
         if(sendTo == "Students"){
-            axios.post("http://localhost:8000/api/v1/interaction/announceToStudent", {year,inputMessage})
+            axios.post(host + "/interaction/announceToStudent", {year,inputMessage})
             .then(() => {
                 console.log("Sent");
             }).catch((err) => {
@@ -31,7 +34,7 @@ export default function Testing() {
             })
         }
         else{
-            axios.post("http://localhost:8000/api/v1/interaction/announceToCompany", {inputMessage})
+            axios.post(host + "/interaction/announceToCompany", {inputMessage})
             .then(() => {
                 console.log("Sent");
             }).catch((err) => {

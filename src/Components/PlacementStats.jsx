@@ -1,6 +1,7 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
+import host from "../config.js";
 
 export default function Exgraph() {
     const [yrbtn, setYrbtn] = React.useState(false);
@@ -8,7 +9,7 @@ export default function Exgraph() {
     const [data1, setData1] = React.useState();
     const [tempData, setTempData] = React.useState();
     React.useEffect(() => {
-        axios.post("http://localhost:8000/api/v1/record/getPlacementData", {})
+        axios.post(host + "/record/getPlacementData", {})
             .then((res) => {
                 setData1(res.data.info);
             }).catch((err) => {
