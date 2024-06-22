@@ -50,6 +50,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
+  console.log(email, password);
   const profile = await authentication.find({ email });
   if (profile.length != 1)
     return res.status(403).json({ msg: "Club not found." });
