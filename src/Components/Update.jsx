@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./CSS/Update.css";
+import host from "../host";
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Update() {
@@ -21,7 +22,7 @@ export default function Update() {
       _id: prop,
     };
     axios
-      .post("http://localhost:8000/api/v1/record/deleteUser", data1)
+      .post(host+"/record/deleteUser", data1)
       .then((res) => {
         toast.success("Data successfully deleted");
       })
@@ -44,7 +45,7 @@ export default function Update() {
     const data = { ...formdata };
     console.log(data);
     axios
-      .post("http://localhost:8000/api/v1/record/getUpdateQuery", data)
+      .post(host+"/record/getUpdateQuery", data)
       .then((res) => {
         if (res.data.length != 0) {
           console.log(res);
@@ -83,7 +84,7 @@ export default function Update() {
       data.isSelected = false;
     }
     axios
-      .patch("http://localhost:8000/api/v1/record/updateUserData", data)
+      .patch(host+"/record/updateUserData", data)
       .then((res) => {
         console.log(res);
         toast.success("Data updated Successfully")

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./CSS/Table.css";
+import host from "../host";
 export default function Table() {
 
   //varibale to data
@@ -17,7 +18,7 @@ export default function Table() {
   //get Data of all students and set in data
   React.useEffect(() => {
     axios
-      .post("http://localhost:8000/api/v1/record/alldata", {})
+      .post(host+"/record/alldata", {})
       .then((info) => {
         setData(info.data);
       });
@@ -110,7 +111,6 @@ export default function Table() {
           <div className="my-4" style={{ width: '30vw' }}>
             <h4 style={{ width: '30vw' }}>Student Data:</h4>
             <p className="my-2">Please select year</p>
-            <div className="d-flex justify-content-center align-items-center"></div>
             <select
               className="form-select p-1"
               aria-label="Default select example"

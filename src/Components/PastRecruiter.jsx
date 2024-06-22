@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from "axios";
+import host from '../host';
 
 function PastRecruiter() {
 
@@ -13,7 +14,7 @@ function PastRecruiter() {
   // In the below hook the data is being posted to the dedicated route and that same data is stored in companies state as well and in the below one, all the data which was fetched is now stored in variable named tempElements through mapping which is then rendered on the scree.
 
   React.useEffect(() => {
-    axios.post("http://localhost:8000/api/v1/company/getAllCompanyname")
+    axios.post(host+"/company/getAllCompanyname")
       .then((res) => {
         console.log("Sent");
         setCompanies(res.data)

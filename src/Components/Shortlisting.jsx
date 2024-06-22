@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./CSS/Shortlisting.css";
+import host from "../host";
 import { ToastContainer, toast } from 'react-toastify';
 
 function Shortlisting() {
@@ -27,7 +28,7 @@ function Shortlisting() {
     const token = urlParams.get("token");
     console.log(token);
     axios
-      .post("http://localhost:8000/api/v1/interaction/renderEligible", {
+      .post(host+"/interaction/renderEligible", {
         token,
       })
       .then((res) => {
@@ -100,7 +101,7 @@ function Shortlisting() {
 
     axios
       .post(
-        "http://localhost:8000/api/v1/interaction/shortlistedCandidate",
+        host+"/interaction/shortlistedCandidate",
         selected
       )
       .then((res) => {

@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./CSS/form.css";
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../host";
 
 export default function Form() {
 
@@ -54,7 +55,7 @@ export default function Form() {
             }
         }
         console.log(data);
-        axios.post("http://localhost:8000/api/v1/record/createData", data)
+        axios.post(host+"/record/createData", data)
             .then(() => {
                 toast.success("Student Sucessfully Registered");
             }).catch((err) => {

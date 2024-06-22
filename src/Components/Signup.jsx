@@ -16,6 +16,7 @@ function RegisterPage2() {
   const [institute, setInstitute] = React.useState();
 
   function handleClick() {
+    console.log(userEmail, passWord, institute);
     if (passWord === confirmPassword) {
       axios.post(host + "/auth/create", {
         instituteName: institute,

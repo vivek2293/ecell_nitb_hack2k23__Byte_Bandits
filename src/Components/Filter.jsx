@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import host from "../host";
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Filter() {
@@ -19,7 +20,7 @@ export default function Filter() {
     function saveData() {
         const data = { ...formdata };
         console.log(data)
-        axios.post("http://localhost:8000/api/v1/interaction/getEligibileCandidateList", data)
+        axios.post(host+"/interaction/getEligibileCandidateList", data)
             .then((res) => {
                 console.log("Sent");
                 toast.success("Please check your email for shortlisted student details")

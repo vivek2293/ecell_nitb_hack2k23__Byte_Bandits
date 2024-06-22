@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import host from "../host";
 import { ToastContainer, toast } from 'react-toastify';
 
 function Selection() {
@@ -25,7 +26,7 @@ function Selection() {
     if (token) {
       axios
         .post(
-          "http://localhost:8000/api/v1/interaction/renderShortlistedCandidate",
+          host+"/interaction/renderShortlistedCandidate",
           { token }
         )
         .then((res) => {
@@ -96,7 +97,7 @@ function Selection() {
     console.log(finalData)
     axios
       .post(
-        "http://localhost:8000/api/v1/interaction/selectedCandidate",
+        host+"/interaction/selectedCandidate",
         finalData
       )
       .then((res) => {
