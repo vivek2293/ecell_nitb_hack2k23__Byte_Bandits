@@ -1,6 +1,12 @@
 import React from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import host from "../host";
+=======
+import host from "../config.js";
+
+
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 export default function Testing() {
     const [msg, setMsg] = React.useState(false);
     const [data,setData] = React.useState();
@@ -24,7 +30,11 @@ export default function Testing() {
         console.log(year);
         console.log(inputMessage)
         if(sendTo == "Students"){
+<<<<<<< HEAD
             axios.post(host+"/interaction/announceToStudent", {year,inputMessage})
+=======
+            axios.post(host + "/interaction/announceToStudent", {year,inputMessage})
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
             .then(() => {
                 console.log("Sent");
             }).catch((err) => {
@@ -32,7 +42,11 @@ export default function Testing() {
             })
         }
         else{
+<<<<<<< HEAD
             axios.post(host+"/interaction/announceToCompany", {inputMessage})
+=======
+            axios.post(host + "/interaction/announceToCompany", {inputMessage})
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
             .then(() => {
                 console.log("Sent");
             }).catch((err) => {

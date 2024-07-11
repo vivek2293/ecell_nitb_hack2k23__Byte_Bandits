@@ -2,9 +2,9 @@ import React from "react";
 import Lottie from "lottie-react";
 import login from "../Components/Assets/login.json";
 import hello from "../Components/Assets/hello.json";
-import "./CSS/Login.css"
+import "./css/login.css"
 import axios from "axios";
-import host from "../host";
+import host from "../config.js";
 import { ToastContainer, toast } from 'react-toastify';
 
 function Login() {

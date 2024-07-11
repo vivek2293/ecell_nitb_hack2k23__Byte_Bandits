@@ -1,7 +1,13 @@
 import React from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import "./CSS/Table.css";
 import host from "../host";
+=======
+import "./css/table.css";
+import host from "../config.js";
+
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 export default function Table() {
 
   //varibale to data
@@ -18,7 +24,11 @@ export default function Table() {
   //get Data of all students and set in data
   React.useEffect(() => {
     axios
+<<<<<<< HEAD
       .post(host+"/record/alldata", {})
+=======
+      .post(host + "/record/alldata", {})
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
       .then((info) => {
         setData(info.data);
       });

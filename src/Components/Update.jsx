@@ -1,8 +1,14 @@
 import React from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import "./CSS/Update.css";
 import host from "../host";
+=======
+import "./css/update.css";
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../config.js";
+
 
 export default function Update() {
   //states to store data
@@ -22,7 +28,11 @@ export default function Update() {
       _id: prop,
     };
     axios
+<<<<<<< HEAD
       .post(host+"/record/deleteUser", data1)
+=======
+      .post(host + "/record/deleteUser", data1)
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
       .then((res) => {
         toast.success("Data successfully deleted");
       })
@@ -45,7 +55,11 @@ export default function Update() {
     const data = { ...formdata };
     console.log(data);
     axios
+<<<<<<< HEAD
       .post(host+"/record/getUpdateQuery", data)
+=======
+      .post(host + "/record/getUpdateQuery", data)
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
       .then((res) => {
         if (res.data.length != 0) {
           console.log(res);
@@ -84,7 +98,11 @@ export default function Update() {
       data.isSelected = false;
     }
     axios
+<<<<<<< HEAD
       .patch(host+"/record/updateUserData", data)
+=======
+      .patch(host + "/record/updateUserData", data)
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
       .then((res) => {
         console.log(res);
         toast.success("Data updated Successfully")

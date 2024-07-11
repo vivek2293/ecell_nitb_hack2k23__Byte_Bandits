@@ -11,6 +11,7 @@ function CheckStatus() {
     axios
       .post(
         host + "/interaction/getCurrentStatusCompany",
+        host + "/interaction/getCurrentStatusCompany",
         { companyName }
       )
       .then((res) => {

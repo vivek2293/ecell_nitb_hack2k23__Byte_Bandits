@@ -1,9 +1,9 @@
 import React from "react";
-import "./CSS/Signup.css"
+import "./css/signup.css"
 import axios from "axios";
 import Lottie from "lottie-react";
 import Signup from "./Assets/signup1.json";
-import host from "../host";
+import host from "../config.js";
 import { ToastContainer, toast } from 'react-toastify';
 
 function RegisterPage2() {

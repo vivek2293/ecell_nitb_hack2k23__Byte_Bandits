@@ -4,7 +4,7 @@ import image2 from "./Assets/3.svg";
 import image3 from "./Assets/2.svg";
 import image4 from "./Assets/7.svg";
 import logo from "./Assets/Logo.png";
-import "./CSS/Homepage.css";
+import "./css/homepage.css";
 import Footer from "./Footer";
 
 function Homepage() {

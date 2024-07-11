@@ -1,8 +1,11 @@
 import React from "react";
-// import data from "../Data.jsx";
-import "./CSS/Company.css"
+import "./css/company.css"
 import axios from "axios";
+<<<<<<< HEAD
 import host from "../host";
+=======
+import host from "../config.js";
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 
 export default function Company() {
 
@@ -78,7 +81,11 @@ export default function Company() {
         }
     }, [elements1]);
     React.useEffect(()=>{
+<<<<<<< HEAD
         axios.post(host+"/company/alldata", {})
+=======
+        axios.post(host + "/company/alldata", {})
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
         .then((res) => {
             setData(res.data);
         }).catch((err) => {

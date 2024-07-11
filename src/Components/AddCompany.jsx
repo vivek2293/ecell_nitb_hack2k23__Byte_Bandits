@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios";
 import host from '../host';
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../config.js";
 
 // Made states for all the entries in the form
 

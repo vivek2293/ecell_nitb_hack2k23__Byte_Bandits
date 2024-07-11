@@ -1,8 +1,13 @@
 import React from "react";
 import axios from "axios";
-import "./CSS/form.css";
+import "./css/form.css";
 import { ToastContainer, toast } from 'react-toastify';
+<<<<<<< HEAD
 import host from "../host";
+=======
+import host from "../config.js";
+
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 
 export default function Form() {
 
@@ -55,7 +60,11 @@ export default function Form() {
             }
         }
         console.log(data);
+<<<<<<< HEAD
         axios.post(host+"/record/createData", data)
+=======
+        axios.post(host + "/record/createData", data)
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
             .then(() => {
                 toast.success("Student Sucessfully Registered");
             }).catch((err) => {

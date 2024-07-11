@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import host from "../host";
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../config.js";
+
 
 function Selection() {
   //States to store Data's
@@ -26,7 +28,11 @@ function Selection() {
     if (token) {
       axios
         .post(
+<<<<<<< HEAD
           host+"/interaction/renderShortlistedCandidate",
+=======
+          host + "/interaction/renderShortlistedCandidate",
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
           { token }
         )
         .then((res) => {
@@ -97,7 +103,11 @@ function Selection() {
     console.log(finalData)
     axios
       .post(
+<<<<<<< HEAD
         host+"/interaction/selectedCandidate",
+=======
+        host + "/interaction/selectedCandidate",
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
         finalData
       )
       .then((res) => {

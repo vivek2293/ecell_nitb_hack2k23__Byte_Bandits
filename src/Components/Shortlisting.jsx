@@ -1,8 +1,14 @@
 import React from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import "./CSS/Shortlisting.css";
 import host from "../host";
+=======
+import "./css/shortlisting.css";
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
 import { ToastContainer, toast } from 'react-toastify';
+import host from "../config.js";
+
 
 function Shortlisting() {
 
@@ -28,7 +34,11 @@ function Shortlisting() {
     const token = urlParams.get("token");
     console.log(token);
     axios
+<<<<<<< HEAD
       .post(host+"/interaction/renderEligible", {
+=======
+      .post(host + "/interaction/renderEligible", {
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
         token,
       })
       .then((res) => {
@@ -101,7 +111,11 @@ function Shortlisting() {
 
     axios
       .post(
+<<<<<<< HEAD
         host+"/interaction/shortlistedCandidate",
+=======
+        host + "/interaction/shortlistedCandidate",
+>>>>>>> 22f2e8f29b470d8498d06ff5eb409a43d54059d1
         selected
       )
       .then((res) => {
